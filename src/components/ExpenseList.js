@@ -180,41 +180,52 @@ const ExpenseList = () => {
                                         </td>
                                     </tr>
                                     {isEditing && editingIndex === index && ( // Show form below the selected row
-                                        <tr>
-                                            <td colSpan="5">
-                                                <form onSubmit={handleUpdate}>
-                                                    <input
-                                                        type="number"
-                                                        placeholder="Amount"
-                                                        value={amount}
-                                                        onChange={(e) => setAmount(e.target.value)}
-                                                        required
-                                                    />
-                                                    <input
-                                                        type="text"
-                                                        placeholder="Category"
-                                                        value={category}
-                                                        onChange={(e) => setCategory(e.target.value)}
-                                                        required
-                                                    />
-                                                    <input
-                                                        type="date"
-                                                        value={date}
-                                                        onChange={(e) => setDate(e.target.value)}
-                                                        required
-                                                    />
-                                                    <input
-                                                        type="text"
-                                                        placeholder="Description (optional)"
-                                                        value={description}
-                                                        onChange={(e) => setDescription(e.target.value)}
-                                                    />
-                                                    <button type="submit">Update Expense</button>
-                                                    <button type="button" onClick={resetForm}>Cancel</button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    )}
+                                    <tr>
+                                        <td colSpan="5">
+                                            <form onSubmit={handleUpdate}>
+                                                <input
+                                                    type="number"
+                                                    placeholder="Amount"
+                                                    value={amount}
+                                                    onChange={(e) => setAmount(e.target.value)}
+                                                    required
+                                                />
+                                                <select
+                                                    value={category}
+                                                    onChange={(e) => setCategory(e.target.value)}
+                                                    required
+                                                >
+                                                    <option value="">Select Category</option>
+                                                    <option value="Food">Food</option>
+                                                    <option value="Transport">Transport</option>
+                                                    <option value="Entertainment">Entertainment</option>
+                                                    <option value="Utilities">Utilities</option>
+                                                    <option value="Health">Health</option>
+                                                    <option value="Education">Education</option>
+                                                    <option value="Shopping">Shopping</option>
+                                                    <option value="Bills">Bills</option>
+                                                    <option value="Rent">Rent</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <input
+                                                    type="date"
+                                                    value={date}
+                                                    onChange={(e) => setDate(e.target.value)}
+                                                    required
+                                                />
+                                                <input
+                                                    type="text"
+                                                    placeholder="Description (optional)"
+                                                    value={description}
+                                                    onChange={(e) => setDescription(e.target.value)}
+                                                />
+                                                <button type="submit">Update Expense</button>
+                                                <button type="button" onClick={resetForm}>Cancel</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                )}
+
                                 </React.Fragment>
                             ))}
                         </tbody>
