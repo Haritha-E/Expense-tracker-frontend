@@ -381,7 +381,7 @@ const ExpenseReport = () => {
                                     onChange={handleYearChange} 
                                     style={selectStyle}
                                 >
-                                    {uniqueYears.map(year => (
+                                    {uniqueYears.sort((a, b) => a - b).map(year => (
                                         <option key={year} value={year}>{year}</option>
                                     ))}
                                 </select>
