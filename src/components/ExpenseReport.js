@@ -300,7 +300,7 @@ const ExpenseReport = () => {
 
         try {
             const response = await axios.post(
-                'http://https://expense-tracker-backend-q8tp.onrender.com/api/expenses/export-to-mail',
+                '//https://expense-tracker-backend-q8tp.onrender.com/api/expenses/export-to-mail',
                 { pdfData: pdfBase64 },
                 {
                     headers: { Authorization: `Bearer ${token}` },
