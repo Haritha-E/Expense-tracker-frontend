@@ -1,7 +1,7 @@
 // src/api.js
 import axios from 'axios';
 
-const API_URL = 'https://api.render.com/deploy/srv-csmuquaj1k6c73dotkeg?key=JIyKMOGVLV8'; // Update this if you deploy to a different domain
+const API_URL = 'https://expense-tracker-backend-q8tp.onrender.com'; // Update this if you deploy to a different domain
 
 
 export const registerUser = async (userData) => {
